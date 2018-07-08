@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/song_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:thumb="@drawable/seek_draw"
+        android:background="#FFFFFF"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:minHeight="20dip"
+        android:maxHeight="20dip">
+
+    </SeekBar>
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgCover"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_circular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/seekbar"
+        app:srcCompat="@drawable/ic_audiotrack_black_24dp" />
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="Title"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintLeft_toRightOf="@+id/imgCover"
+        app:layout_constraintTop_toTopOf="@+id/imgCover" />
+
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+
+        android:fontFamily="@font/century_gothic"
+        android:text="Artist"
+        android:textColor="@color/colorSecondary"
+        app:layout_constraintLeft_toRightOf="@+id/imgCover"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/imgPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/play_pause" />
+
+    <ProgressBar
+        android:id="@+id/progressBarWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/imgPlayPause"
+        app:layout_constraintBottom_toBottomOf="@id/imgPlayPause"
+        app:layout_constraintLeft_toLeftOf="@id/imgPlayPause"
+        app:layout_constraintRight_toRightOf="@id/imgPlayPause"
+        android:indeterminate="true"
+        android:theme="@style/AppTheme.WhiteAccent"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

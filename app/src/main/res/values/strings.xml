@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ola Play</string>
+    <string name="action_search">Search by name</string>
+    <string name="century_font">century-gothic.ttf</string>
+    <string name="error_fetching_songs">There was some error connecting to our servers. Please try again in some time.</string>
+    <string name="sorry_no_songs_to_display">Sorry! No songs to display.</string>
+</resources>
